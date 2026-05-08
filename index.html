@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>মুহাম্মদ শফিকুর রহমান — ফিচার লেখক</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Hind Siliguri', sans-serif;
+      background: #f7f5f0;
+      color: #1a1a1a;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 3.5rem 0 2.5rem;
+      border-bottom: 1px solid #e0ddd6;
+    }
+
+    .name {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #111;
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.01em;
+    }
+
+    .role {
+      font-size: 1rem;
+      color: #6b6860;
+      margin-bottom: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .topics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 1.8rem;
+    }
+
+    .tag {
+      font-size: 0.78rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid #d6d3cc;
+      color: #5a5850;
+      background: #fff;
+    }
+
+    .stats {
+      display: flex;
+      gap: 2.5rem;
+    }
+
+    .stat-num {
+      display: block;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #111;
+    }
+
+    .stat-label {
+      display: block;
+      font-size: 0.75rem;
+      color: #8a8780;
+      margin-top: 2px;
+    }
+
+    /* About */
+    .section {
+      padding: 2rem 0;
+      border-bottom: 1px solid #e0ddd6;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #a8a59e;
+      margin-bottom: 1rem;
+    }
+
+    .about-text {
+      font-size: 0.97rem;
+      color: #4a4845;
+      line-height: 1.85;
+    }
+
+    /* Articles */
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #e0ddd6;
+      border-radius: 12px;
+      padding: 1.1rem 1.3rem;
+      text-decoration: none;
+      display: block;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      border-color: #b5b2aa;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .card-topic {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #2e6da4;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #111;
+      line-height: 1.55;
+      margin-bottom: 10px;
+    }
+
+    .card-meta {
+      font-size: 0.75rem;
+      color: #a8a59e;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .card-meta .sep {
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: #c8c5be;
+      flex-shrink: 0;
+    }
+
+    .card-meta .arrow {
+      margin-left: auto;
+      font-size: 0.8rem;
+      color: #c8c5be;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 1.8rem 0 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .footer-copy {
+      font-size: 0.8rem;
+      color: #a8a59e;
+    }
+
+    .footer-country {
+      font-size: 0.8rem;
+      color: #c8c5be;
+    }
+
+    @media (max-width: 480px) {
+      .name { font-size: 1.6rem; }
+      .stats { gap: 1.5rem; }
+      .articles-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="hero">
+      <div class="name">মুহাম্মদ শফিকুর রহমান</div>
+      <div class="role">বাংলাদেশের জাতীয় দৈনিকে ফিচার লেখক — সমাজ, পরিবেশ ও মানুষের গল্প নিয়ে কলম চালাই।</div>
+      <div class="topics">
+        <span class="tag">সমাজ</span>
+        <span class="tag">পরিবেশ</span>
+        <span class="tag">মানুষের গল্প</span>
+        <span class="tag">সফলতার গল্প</span>
+        <span class="tag">ধর্ম ও জীবন</span>
+        <span class="tag">ঐতিহ্য ও সংস্কৃতি</span>
+      </div>
+      <div class="stats">
+        <div>
+          <span class="stat-num">২৫০+</span>
+          <span class="stat-label">ফিচার প্রতি বছর</span>
+        </div>
+        <div>
+          <span class="stat-num">জাতীয়</span>
+          <span class="stat-label">দৈনিকে প্রকাশিত</span>
+        </div>
+        <div>
+          <span class="stat-num">বহু</span>
+          <span class="stat-label">পত্রিকায় নিয়মিত</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">আমার লেখা সম্পর্কে</div>
+      <div class="about-text">
+        আমি লিখি মাঠের কথা, মানুষের কথা। পাহাড়ের বাঁশ-বেতের কারিগর থেকে শুরু করে জলের নিচে জয় করা সাহসী মানুষ — এই সব জীবনের গল্প আমার কলমে উঠে আসে। শুধু সংবাদ নয়, পাঠক যেন গল্পটা অনুভব করতে পারেন — এটাই আমার লেখার লক্ষ্য।
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">বাছাই করা লেখা</div>
+      <div class="articles-grid">
+
+        <a class="card" href="https://www.ajkerpatrika.com/women/ajpaiywxla2c9" target="_blank" rel="noopener">
+          <div class="card-topic">ঐতিহ্য ও সংস্কৃতি</div>
+          <div class="card-title">বাঁশ-বেতে বোনা পাহাড়ি ঐতিহ্যের গল্প</div>
+          <div class="card-meta">
+            <span>আজকের পত্রিকা</span>
+            <span class="sep"></span>
+            <span>২৯ এপ্রিল ২০২৬</span>
+            <span class="arrow">↗</span>
+          </div>
+        </a>
+
+        <a class="card" href="https://www.kalerkantho.com/print-edition/first-page/2026/04/25/1676171" target="_blank" rel="noopener">
+          <div class="card-topic">পরিবেশ ও প্রকৃতি</div>
+          <div class="card-title">পাখির পরম ভরসা সায়েদ</div>
+          <div class="card-meta">
+            <span>কালের কণ্ঠ</span>
+            <span class="sep"></span>
+            <span>২৫ এপ্রিল ২০২৬</span>
+            <span class="arrow">↗</span>
+          </div>
+        </a>
+
+        <a class="card" href="https://www.ajkerpatrika.com/women/ajpbr8oqrbclq" target="_blank" rel="noopener">
+          <div class="card-topic">মানুষের গল্প</div>
+          <div class="card-title">জলের গভীরে জান্নাতির জয়যাত্রা</div>
+          <div class="card-meta">
+            <span>আজকের পত্রিকা</span>
+            <span class="sep"></span>
+            <span>২২ এপ্রিল ২০২৬</span>
+            <span class="arrow">↗</span>
+          </div>
+        </a>
+
+        <a class="card" href="https://www.shomoyeralo.com/news/357701" target="_blank" rel="noopener">
+          <div class="card-topic">ধর্ম ও জীবন</div>
+          <div class="card-title">প্রাণী হত্যা ইসলামের শিক্ষা নয়</div>
+          <div class="card-meta">
+            <span>সময়ের আলো</span>
+            <span class="sep"></span>
+            <span>১৯ এপ্রিল ২০২৬</span>
+            <span class="arrow">↗</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <div class="footer">
+      <span class="footer-copy">© মুহাম্মদ শফিকুর রহমান</span>
+      <span class="footer-country">বাংলাদেশ</span>
+    </div>
+
+  </div>
+</body>
+</html>
