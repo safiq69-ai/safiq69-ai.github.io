@@ -6,189 +6,337 @@
       <title>মুহাম্মদ শফিকুর রহমান — ফিচার লেখক</title>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet" />
-      <style> *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; } :root { --green: #1a7a4a; --green-light: #e8f5ee; --red: #c0392b; --red-light: #fdecea; --gold: #b8860b; --gold-light: #fdf6e3; --blue: #1a5fa8; --blue-light: #e8f0fb; --teal: #0d7377; --teal-light: #e5f4f4; --purple: #6c3483; --purple-light: #f4eaf8; --bg: #f4f6f9; --text: #1a1a1a; --muted: #6b6860; --border: #dde2ea; } body { font-family: 'Hind Siliguri', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; } .topbar { background: linear-gradient(135deg, #1a5fa8 0%, #1a7a4a 100%); height: 6px; } .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; } /* Hero */ .hero { padding: 3rem 0 2.5rem; text-align: center; border-bottom: 2px solid var(--border); } .avatar-wrap img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 4px solid #fff; box-shadow: 0 4px 20px rgba(26,95,168,0.18); margin-bottom: 1.2rem; } .name { font-size: 2rem; font-weight: 700; color: #111; margin-bottom: 0.4rem; } .role { font-size: 0.97rem; color: var(--muted); margin-bottom: 1.6rem; line-height: 1.6; } .topics { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 2rem; justify-content: center; } .tag { font-size: 0.8rem; font-weight: 600; padding: 6px 16px; border-radius: 20px; text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; display: inline-block; } .tag:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.13); } .tag-green { background: var(--green-light); color: var(--green); border: 1.5px solid #a8d5bc; } .tag-red { background: var(--red-light); color: var(--red); border: 1.5px solid #f0b8b3; } .tag-gold { background: var(--gold-light); color: var(--gold); border: 1.5px solid #e0c87a; } .tag-blue { background: var(--blue-light); color: var(--blue); border: 1.5px solid #a8c4e8; } .tag-teal { background: var(--teal-light); color: var(--teal); border: 1.5px solid #8ecece; } .tag-purple { background: var(--purple-light); color: var(--purple); border: 1.5px solid #c9a8e0; } /* Stats */ .stats { display: flex; justify-content: center; background: #fff; border-radius: 14px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05); } .stat { flex: 1; padding: 1.1rem 0.5rem; text-align: center; border-right: 1px solid var(--border); } .stat:last-child { border-right: none; } .stat-num { display: block; font-size: 1.35rem; font-weight: 700; color: var(--blue); } .stat-label { display: block; font-size: 0.72rem; color: #999; margin-top: 3px; } /* Section */ .section { padding: 2rem 0; border-bottom: 1px solid var(--border); } .section-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #bbb; margin-bottom: 1rem; } .about-text { font-size: 0.97rem; color: #4a4845; line-height: 1.9; background: #fff; border-left: 4px solid var(--green); border-radius: 0 10px 10px 0; padding: 1rem 1.2rem; box-shadow: 0 1px 6px rgba(0,0,0,0.04); } /* Category */ .category-group { margin-bottom: 2.2rem; scroll-margin-top: 2rem; width: 100%; } .category-heading { display: flex; align-items: center; gap: 10px; font-size: 1.05rem; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid; } .cat-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; } .cat-green .category-heading { color: var(--green); border-color: var(--green); } .cat-green .cat-dot { background: var(--green); } .cat-blue .category-heading { color: var(--blue); border-color: var(--blue); } .cat-blue .cat-dot { background: var(--blue); } .cat-teal .category-heading { color: var(--teal); border-color: var(--teal); } .cat-teal .cat-dot { background: var(--teal); } .cat-gold .category-heading { color: var(--gold); border-color: var(--gold); } .cat-gold .cat-dot { background: var(--gold); } .cat-red .category-heading { color: var(--red); border-color: var(--red); } .cat-red .cat-dot { background: var(--red); } .cat-purple .category-heading { color: var(--purple); border-color: var(--purple); } .cat-purple .cat-dot { background: var(--purple); } .articles-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; } .card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 1rem 1.2rem; text-decoration: none; display: block; transition: box-shadow 0.2s, transform 0.15s; border-top: 3px solid transparent; } .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.09); transform: translateY(-2px); } .cat-green .card { border-top-color: var(--green); } .cat-green .card:hover { border-color: var(--green); } .cat-blue .card { border-top-color: var(--blue); } .cat-blue .card:hover { border-color: var(--blue); } .cat-teal .card { border-top-color: var(--teal); } .cat-teal .card:hover { border-color: var(--teal); } .cat-gold .card { border-top-color: var(--gold); } .cat-gold .card:hover { border-color: var(--gold); } .cat-red .card { border-top-color: var(--red); } .cat-red .card:hover { border-color: var(--red); } .cat-purple .card { border-top-color: var(--purple); } .cat-purple .card:hover { border-color: var(--purple); } .card-topic { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px; } .cat-green .card-topic { color: var(--green); } .cat-blue .card-topic { color: var(--blue); } .cat-teal .card-topic { color: var(--teal); } .cat-gold .card-topic { color: var(--gold); } .cat-red .card-topic { color: var(--red); } .cat-purple .card-topic { color: var(--purple); } .card-title { font-size: 0.95rem; font-weight: 500; color: #111; line-height: 1.55; margin-bottom: 10px; } .card-meta { font-size: 0.73rem; color: #aaa; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; } .sep { width: 3px; height: 3px; border-radius: 50%; background: #ccc; flex-shrink: 0; } .arrow { margin-left: auto; font-size: 0.85rem; color: #ccc; } /* Footer */ .footer { padding: 1.8rem 0 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; } .footer-copy { font-size: 0.8rem; color: #aaa; } .footer-country { font-size: 0.8rem; color: #ccc; } @media (max-width: 480px) { .name { font-size: 1.6rem; } .articles-grid { grid-template-columns: 1fr; } } } .section { display: block; } </style>
+      <style>
+         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+         :root {
+            --green: #1a7a4a; --green-light: #e8f5ee;
+            --red: #c0392b; --red-light: #fdecea;
+            --gold: #b8860b; --gold-light: #fdf6e3;
+            --blue: #1a5fa8; --blue-light: #e8f0fb;
+            --teal: #0d7377; --teal-light: #e5f4f4;
+            --purple: #6c3483; --purple-light: #f4eaf8;
+            --bg: #f4f6f9; --text: #1a1a1a; --muted: #6b6860; --border: #dde2ea;
+         }
+         body { font-family: 'Hind Siliguri', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+         .topbar { background: linear-gradient(135deg, #1a5fa8 0%, #1a7a4a 100%); height: 6px; }
+         .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+         /* Hero */
+         .hero { padding: 3rem 0 2.5rem; text-align: center; border-bottom: 2px solid var(--border); }
+         .avatar-wrap img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 4px solid #fff; box-shadow: 0 4px 20px rgba(26,95,168,0.18); margin-bottom: 1.2rem; }
+         .name { font-size: 2rem; font-weight: 700; color: #111; margin-bottom: 0.4rem; }
+         .role { font-size: 0.97rem; color: var(--muted); margin-bottom: 1.6rem; line-height: 1.6; }
+         .topics { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 2rem; justify-content: center; }
+         .tag { font-size: 0.8rem; font-weight: 600; padding: 6px 16px; border-radius: 20px; text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; display: inline-block; }
+         .tag:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.13); }
+         .tag-green { background: var(--green-light); color: var(--green); border: 1.5px solid #a8d5bc; }
+         .tag-red { background: var(--red-light); color: var(--red); border: 1.5px solid #f0b8b3; }
+         .tag-gold { background: var(--gold-light); color: var(--gold); border: 1.5px solid #e0c87a; }
+         .tag-blue { background: var(--blue-light); color: var(--blue); border: 1.5px solid #a8c4e8; }
+         .tag-teal { background: var(--teal-light); color: var(--teal); border: 1.5px solid #8ecece; }
+         .tag-purple { background: var(--purple-light); color: var(--purple); border: 1.5px solid #c9a8e0; }
+
+         /* Stats */
+         .stats { display: flex; justify-content: center; background: #fff; border-radius: 14px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+         .stat { flex: 1; padding: 1.1rem 0.5rem; text-align: center; border-right: 1px solid var(--border); }
+         .stat:last-child { border-right: none; }
+         .stat-num { display: block; font-size: 1.35rem; font-weight: 700; color: var(--blue); }
+         .stat-label { display: block; font-size: 0.72rem; color: #999; margin-top: 3px; }
+
+         /* Section */
+         .section { padding: 2rem 0; border-bottom: 1px solid var(--border); }
+         .section-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #bbb; margin-bottom: 1rem; }
+         .about-text { font-size: 0.97rem; color: #4a4845; line-height: 1.9; background: #fff; border-left: 4px solid var(--green); border-radius: 0 10px 10px 0; padding: 1rem 1.2rem; box-shadow: 0 1px 6px rgba(0,0,0,0.04); margin-bottom: 2rem; }
+
+         /* Category */
+         .category-group { margin-bottom: 2.2rem; scroll-margin-top: 2rem; width: 100%; }
+         .category-heading { display: flex; align-items: center; gap: 10px; font-size: 1.05rem; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid; }
+         .cat-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+         .cat-green .category-heading { color: var(--green); border-color: var(--green); }
+         .cat-green .cat-dot { background: var(--green); }
+         .cat-blue .category-heading { color: var(--blue); border-color: var(--blue); }
+         .cat-blue .cat-dot { background: var(--blue); }
+         .cat-teal .category-heading { color: var(--teal); border-color: var(--teal); }
+         .cat-teal .cat-dot { background: var(--teal); }
+         .cat-gold .category-heading { color: var(--gold); border-color: var(--gold); }
+         .cat-gold .cat-dot { background: var(--gold); }
+         .cat-red .category-heading { color: var(--red); border-color: var(--red); }
+         .cat-red .cat-dot { background: var(--red); }
+         .cat-purple .category-heading { color: var(--purple); border-color: var(--purple); }
+         .cat-purple .cat-dot { background: var(--purple); }
+
+         .articles-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+         .card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 1rem 1.2rem; text-decoration: none; display: block; transition: box-shadow 0.2s, transform 0.15s; border-top: 3px solid transparent; }
+         .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.09); transform: translateY(-2px); }
+         .cat-green .card { border-top-color: var(--green); }
+         .cat-green .card:hover { border-color: var(--green); }
+         .cat-blue .card { border-top-color: var(--blue); }
+         .cat-blue .card:hover { border-color: var(--blue); }
+         .cat-teal .card { border-top-color: var(--teal); }
+         .cat-teal .card:hover { border-color: var(--teal); }
+         .cat-gold .card { border-top-color: var(--gold); }
+         .cat-gold .card:hover { border-color: var(--gold); }
+         .cat-red .card { border-top-color: var(--red); }
+         .cat-red .card:hover { border-color: var(--red); }
+         .cat-purple .card { border-top-color: var(--purple); }
+         .cat-purple .card:hover { border-color: var(--purple); }
+
+         .card-topic { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px; }
+         .cat-green .card-topic { color: var(--green); }
+         .cat-blue .card-topic { color: var(--blue); }
+         .cat-teal .card-topic { color: var(--teal); }
+         .cat-gold .card-topic { color: var(--gold); }
+         .cat-red .card-topic { color: var(--red); }
+         .cat-purple .card-topic { color: var(--purple); }
+         .card-title { font-size: 0.95rem; font-weight: 500; color: #111; line-height: 1.55; margin-bottom: 10px; }
+         .card-meta { font-size: 0.73rem; color: #aaa; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+         .sep { width: 3px; height: 3px; border-radius: 50%; background: #ccc; flex-shrink: 0; }
+         .arrow { margin-left: auto; font-size: 0.85rem; color: #ccc; }
+
+         /* Footer */
+         .footer { padding: 1.8rem 0 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+         .footer-copy { font-size: 0.8rem; color: #aaa; }
+         .footer-country { font-size: 0.8rem; color: #ccc; }
+
+         @media (max-width: 480px) {
+            .name { font-size: 1.6rem; }
+            .articles-grid { grid-template-columns: 1fr; }
+         }
+      </style>
    </head>
    <body>
       <div class="topbar"></div>
       <div class="container">
-      <!-- Hero --> 
-      <div class="hero">
-         <div class="avatar-wrap"> <img src="20260321_170359.jpg" alt="মুহাম্মদ শফিকুর রহমান"> </div>
-         <div class="name">মুহাম্মদ শফিকুর রহমান</div>
-         <div class="role">ফিচার লেখক — মানুষের জীবন, অর্জন ও সংগ্রামের গল্প নিয়ে<br>তিন দশকেরও বেশি সময় ধরে কলম চালাচ্ছি।</div>
-         <div class="topics"> <a class="tag tag-green" href="#সফলতার-গল্প">সফলতার গল্প</a> <a class="tag tag-blue" href="#মানুষের-গল্প">মানুষের গল্প</a> <a class="tag tag-teal" href="#পরিবেশ-ও-প্রকৃতি">পরিবেশ ও প্রকৃতি</a> <a class="tag tag-gold" href="#ধর্ম-ও-জীবন">ধর্ম ও জীবন</a> <a class="tag tag-red" href="#ঐতিহ্য-ও-সংস্কৃতি">ঐতিহ্য ও সংস্কৃতি</a> <a class="tag tag-purple" href="#লেখালেখি">লেখালেখি</a> <a class="tag tag-purple" href="#ফ্রিল্যান্সিং">ফ্রিল্যান্সিং</a> <a class="tag tag-purple" href="#ক্যালিগ্রাফি">ক্যালিগ্রাফি</a> <a class="tag tag-purple" href="#নারী">নারী</a> </div>
-         <div class="stats">
-            <div class="stat"> <span class="stat-num">৩০+</span> <span class="stat-label">বছরের অভিজ্ঞতা</span> </div>
-            <div class="stat"> <span class="stat-num">২১টি</span> <span class="stat-label">পত্রিকায় নিয়মিত</span> </div>
-            <div class="stat"> <span class="stat-num">২৫০+</span> <span class="stat-label">ফিচার প্রতি বছর</span> </div>
+
+         <!-- Hero -->
+         <div class="hero">
+            <div class="avatar-wrap">
+               <img src="20260321_170359.jpg" alt="মুহাম্মদ শফিকুর রহমান">
+            </div>
+            <div class="name">মুহাম্মদ শফিকুর রহমান</div>
+            <div class="role">ফিচার লেখক — মানুষের জীবন, অর্জন ও সংগ্রামের গল্প নিয়ে<br>তিন দশকেরও বেশি সময় ধরে কলম চালাচ্ছি।</div>
+            <div class="topics">
+               <a class="tag tag-green" href="#সফলতার-গল্প">সফলতার গল্প</a>
+               <a class="tag tag-blue" href="#মানুষের-গল্প">মানুষের গল্প</a>
+               <a class="tag tag-teal" href="#পরিবেশ-ও-প্রকৃতি">পরিবেশ ও প্রকৃতি</a>
+               <a class="tag tag-gold" href="#ধর্ম-ও-জীবন">ধর্ম ও জীবন</a>
+               <a class="tag tag-red" href="#ঐতিহ্য-ও-সংস্কৃতি">ঐতিহ্য ও সংস্কৃতি</a>
+               <a class="tag tag-purple" href="#লেখালেখি">লেখালেখি</a>
+               <a class="tag tag-purple" href="#ফ্রিল্যান্সিং">ফ্রিল্যান্সিং</a>
+               <a class="tag tag-purple" href="#ক্যালিগ্রাফি">ক্যালিগ্রাফি</a>
+               <a class="tag tag-purple" href="#নারী">নারী</a>
+            </div>
+            <div class="stats">
+               <div class="stat"><span class="stat-num">৩০+</span><span class="stat-label">বছরের অভিজ্ঞতা</span></div>
+               <div class="stat"><span class="stat-num">২১টি</span><span class="stat-label">পত্রিকায় নিয়মিত</span></div>
+               <div class="stat"><span class="stat-num">২৫০+</span><span class="stat-label">ফিচার প্রতি বছর</span></div>
+            </div>
          </div>
-      </div>
-      <!-- About --> 
-      <div class="section">
-      <div class="section-label">আমার সম্পর্কে</div>
-      <div class="about-text"> মুহাম্মদ শফিকুর রহমান — বাংলাদেশের একজন অভিজ্ঞ ফিচার লেখক। ১৯৯৫ সাল থেকে কলম ধরেছেন; তিন দশকেরও বেশি সময় ধরে লিখে চলেছেন জীবনঘনিষ্ঠ মানুষের কথা। ঢাকাসহ সারা দেশ থেকে প্রকাশিত ২১টি পত্রিকায় নিয়মিত তাঁর লেখা ছাপা হয়। এমবিএ ডিগ্রিধারী এই লেখকের কলমে উঠে আসে সমাজের নানা স্তরের মানুষের অর্জন, সংগ্রাম ও সাফল্যের গল্প — কারণ তিনি বিশ্বাস করেন, প্রতিটি জীবনেই আছে একটি অনন্য আখ্যান। </div>
-      <!-- নারী --> 
-      <div class="category-group cat-purple" id=" নারী ">
-      <div class="category-heading"> <span class="cat-dot"></span> নারী </div>
-      <div class="articles-grid">
-      <a class="card" href="আর্টিকেলের লিংক" target="_blank" rel="noopener">
-         <div class="card-topic"> নারী </div>
-         <div class="card-title"> ফারজানার রঙিন ক্যানভাসের আলো</div>
-         <div class="card-meta"> <span>প্রতিদিনের বাংলাদেশ</span> <span class="sep"></span> <span> ১০ এপ্রিল ২০২৩ </span> <span class="arrow">↗</span> </div>
-      </a>
-      <!-- ক্যালিগ্রাফি --> 
-      <div class="category-group cat-purple" id="ক্যালিগ্রাফি">
-      <div class="category-heading"> <span class="cat-dot"></span> ক্যালিগ্রাফি </div>
-      <div class="articles-grid">
-      <a class="card" href="https://www.kalerkantho.com/feature/oboshore/2020/03/03/881319" target="_blank" rel="noopener">
-         <div class="card-topic">ক্যালিগ্রাফি</div>
-         <div class="card-title">উসামা শব্দ আঁকেন</div>
-         <div class="card-meta"> <span>কালেরকন্ঠ</span> <span class="sep"></span> <span>৩ মার্চ ২০২০</span> <span class="arrow">↗</span> </div>
-      </a>
-      <a class="card" href="https://dailynayadiganta.com/printed-edition/3KQu4MZHcTO9" target="_blank" rel="noopener">
-         <div class="card-topic">ক্যালিগ্রাফি</div>
-         <div class="card-title">ক্যালিগ্রাফির কিংবদন্তি আবদুর রহীম</div>
-         <div class="card-meta"> <span>নয়াদিগন্ত</span> <span class="sep"></span> <span>৩০ অক্টোবর ২০২৫</span> <span class="arrow">↗</span> </div>
-      </a>
-      <!-- Articles --> 
-      <div class="section">
-      <div class="section-label">বাছাই করা লেখা</div>
-      <div class="category-group cat-purple" id="ফ্রিল্যান্সিং">
-         <div class="category-heading"><span class="cat-dot"></span> ফ্রিল্যান্সিং</div>
-         <div class="articles-grid">
-            <a class="card" href="https://www.ekalerkantho.com/home/page/2022-03-27/7" target="_blank" rel="noopener">
-               <div class="card-topic">ফ্রিল্যান্সিং</div>
-               <div class="card-title">ফ্রিল্যান্সিংয়ে সফল তাবেন্দা</div>
-               <div class="card-meta"> <span>কালেরকন্ঠ</span><span class="sep"></span> <span>২৭ মার্চ ২০২২</span><span class="arrow">↗</span> </div>
-            </a>
-            <a class="card" href="https://www.kalerkantho.com/online/info-tech/2023/01/15/1227811" target="_blank" rel="noopener">
-               <div class="card-topic">ফ্রিল্যান্সিং</div>
-               <div class="card-title">লিজা মাসে আয় করেন চার লাখ টাকা</div>
-               <div class="card-meta"> <span>কালেরকন্ঠ</span> <span class="sep"></span> <span>১১ মে ২০২৬</span> <span class="arrow">↗</span> </div>
-            </a>
-            <a class="card" href="https://www.ekalerkantho.com/home/page/2023-04-16/7 " target="_blank" rel="noopener">
-               <div class="card-topic">ফ্রিল্যান্সিং</div>
-               <div class="card-title">ফ্রিল্যান্সার গড়ার কারিগর মিনহাজুল আসিফ</div>
-               <div class="card-meta"> <span>কালেরকন্ঠ</span> <span class="sep"></span> <span>১৯ এপ্রিল ২০২৩</span> <span class="arrow">↗</span> </div>
-            </a>
-            <a class="card" href="https://www.ekalerkantho.com/home/page/2023-10-22/9 " target="_blank" rel="noopener">
-               <div class="card-topic">ফ্রিল্যান্সিং</div>
-               <div class="card-title">ফ্রিল্যান্সিং করে কোটিপতি</div>
-               <div class="card-meta"> <span>কালেরকন্ঠ</span> <span class="sep"></span> <span>২২ অক্টোবর ২০২৩</span> <span class="arrow">↗</span> </div>
-            </a>
-            <!-- সফলতার গল্প --> 
+         <!-- /Hero -->
+
+         <!-- About -->
+         <div class="section">
+            <div class="section-label">আমার সম্পর্কে</div>
+            <div class="about-text">
+               মুহাম্মদ শফিকুর রহমান — বাংলাদেশের একজন অভিজ্ঞ ফিচার লেখক। ১৯৯৫ সাল থেকে কলম ধরেছেন; তিন দশকেরও বেশি সময় ধরে লিখে চলেছেন জীবনঘনিষ্ঠ মানুষের কথা। ঢাকাসহ সারা দেশ থেকে প্রকাশিত ২১টি পত্রিকায় নিয়মিত তাঁর লেখা ছাপা হয়। এমবিএ ডিগ্রিধারী এই লেখকের কলমে উঠে আসে সমাজের নানা স্তরের মানুষের অর্জন, সংগ্রাম ও সাফল্যের গল্প — কারণ তিনি বিশ্বাস করেন, প্রতিটি জীবনেই আছে একটি অনন্য আখ্যান।
+            </div>
+         </div>
+         <!-- /About -->
+
+         <!-- Articles -->
+         <div class="section">
+            <div class="section-label">বাছাই করা লেখা</div>
+
+            <!-- নারী -->
+            <div class="category-group cat-purple" id="নারী">
+               <div class="category-heading"><span class="cat-dot"></span> নারী</div>
+               <div class="articles-grid">
+                  <a class="card" href="আর্টিকেলের লিংক" target="_blank" rel="noopener">
+                     <div class="card-topic">নারী</div>
+                     <div class="card-title">ফারজানার রঙিন ক্যানভাসের আলো</div>
+                     <div class="card-meta"><span>প্রতিদিনের বাংলাদেশ</span><span class="sep"></span><span>১০ এপ্রিল ২০২৩</span><span class="arrow">↗</span></div>
+                  </a>
+               </div>
+            </div>
+            <!-- /নারী -->
+
+            <!-- ক্যালিগ্রাফি -->
+            <div class="category-group cat-purple" id="ক্যালিগ্রাফি">
+               <div class="category-heading"><span class="cat-dot"></span> ক্যালিগ্রাফি</div>
+               <div class="articles-grid">
+                  <a class="card" href="https://www.kalerkantho.com/feature/oboshore/2020/03/03/881319" target="_blank" rel="noopener">
+                     <div class="card-topic">ক্যালিগ্রাফি</div>
+                     <div class="card-title">উসামা শব্দ আঁকেন</div>
+                     <div class="card-meta"><span>কালেরকন্ঠ</span><span class="sep"></span><span>৩ মার্চ ২০২০</span><span class="arrow">↗</span></div>
+                  </a>
+                  <a class="card" href="https://dailynayadiganta.com/printed-edition/3KQu4MZHcTO9" target="_blank" rel="noopener">
+                     <div class="card-topic">ক্যালিগ্রাফি</div>
+                     <div class="card-title">ক্যালিগ্রাফির কিংবদন্তি আবদুর রহীম</div>
+                     <div class="card-meta"><span>নয়াদিগন্ত</span><span class="sep"></span><span>৩০ অক্টোবর ২০২৫</span><span class="arrow">↗</span></div>
+                  </a>
+               </div>
+            </div>
+            <!-- /ক্যালিগ্রাফি -->
+
+            <!-- ফ্রিল্যান্সিং -->
+            <div class="category-group cat-purple" id="ফ্রিল্যান্সিং">
+               <div class="category-heading"><span class="cat-dot"></span> ফ্রিল্যান্সিং</div>
+               <div class="articles-grid">
+                  <a class="card" href="https://www.ekalerkantho.com/home/page/2022-03-27/7" target="_blank" rel="noopener">
+                     <div class="card-topic">ফ্রিল্যান্সিং</div>
+                     <div class="card-title">ফ্রিল্যান্সিংয়ে সফল তাবেন্দা</div>
+                     <div class="card-meta"><span>কালেরকন্ঠ</span><span class="sep"></span><span>২৭ মার্চ ২০২২</span><span class="arrow">↗</span></div>
+                  </a>
+                  <a class="card" href="https://www.kalerkantho.com/online/info-tech/2023/01/15/1227811" target="_blank" rel="noopener">
+                     <div class="card-topic">ফ্রিল্যান্সিং</div>
+                     <div class="card-title">লিজা মাসে আয় করেন চার লাখ টাকা</div>
+                     <div class="card-meta"><span>কালেরকন্ঠ</span><span class="sep"></span><span>১১ মে ২০২৬</span><span class="arrow">↗</span></div>
+                  </a>
+                  <a class="card" href="https://www.ekalerkantho.com/home/page/2023-04-16/7" target="_blank" rel="noopener">
+                     <div class="card-topic">ফ্রিল্যান্সিং</div>
+                     <div class="card-title">ফ্রিল্যান্সার গড়ার কারিগর মিনহাজুল আসিফ</div>
+                     <div class="card-meta"><span>কালেরকন্ঠ</span><span class="sep"></span><span>১৯ এপ্রিল ২০২৩</span><span class="arrow">↗</span></div>
+                  </a>
+                  <a class="card" href="https://www.ekalerkantho.com/home/page/2023-10-22/9" target="_blank" rel="noopener">
+                     <div class="card-topic">ফ্রিল্যান্সিং</div>
+                     <div class="card-title">ফ্রিল্যান্সিং করে কোটিপতি</div>
+                     <div class="card-meta"><span>কালেরকন্ঠ</span><span class="sep"></span><span>২২ অক্টোবর ২০২৩</span><span class="arrow">↗</span></div>
+                  </a>
+               </div>
+            </div>
+            <!-- /ফ্রিল্যান্সিং -->
+
+            <!-- সফলতার গল্প -->
             <div class="category-group cat-green" id="সফলতার-গল্প">
                <div class="category-heading"><span class="cat-dot"></span> সফলতার গল্প</div>
                <div class="articles-grid">
                   <a class="card" href="https://www.ajkerpatrika.com/women/ajp6tggcavzbb" target="_blank" rel="noopener">
                      <div class="card-topic">সফলতার গল্প</div>
                      <div class="card-title">বিশ্ববিদ্যালয়ে আইন বিষয়ে পড়বেন নুহা</div>
-                     <div class="card-meta"> <span>আজকের পত্রিকা</span><span class="sep"></span> <span>২৫ ফেব্রুয়ারি ২০২৬</span><span class="arrow">↗</span> </div>
+                     <div class="card-meta"><span>আজকের পত্রিকা</span><span class="sep"></span><span>২৫ ফেব্রুয়ারি ২০২৬</span><span class="arrow">↗</span></div>
                   </a>
                   <a class="card" href="https://www.kalerkantho.com/feature/oboshor/2026/04/07/1668380" target="_blank" rel="noopener">
                      <div class="card-topic">সফলতার গল্প</div>
                      <div class="card-title">ইসমাইলের খ্যাতি এখন বিশ্বজুড়ে</div>
-                     <div class="card-meta"> <span>কালের কণ্ঠ</span><span class="sep"></span> <span>৭ এপ্রিল ২০২৬</span><span class="arrow">↗</span> </div>
+                     <div class="card-meta"><span>কালের কণ্ঠ</span><span class="sep"></span><span>৭ এপ্রিল ২০২৬</span><span class="arrow">↗</span></div>
                   </a>
                </div>
             </div>
-            <!-- মানুষের গল্প --> 
+            <!-- /সফলতার গল্প -->
+
+            <!-- মানুষের গল্প -->
             <div class="category-group cat-blue" id="মানুষের-গল্প">
                <div class="category-heading"><span class="cat-dot"></span> মানুষের গল্প</div>
                <div class="articles-grid">
                   <a class="card" href="https://www.ajkerpatrika.com/women/ajpbr8oqrbclq" target="_blank" rel="noopener">
                      <div class="card-topic">মানুষের গল্প</div>
                      <div class="card-title">জলের গভীরে জান্নাতির জয়যাত্রা</div>
-                     <div class="card-meta"> <span>আজকের পত্রিকা</span><span class="sep"></span> <span>২২ এপ্রিল ২০২৬</span><span class="arrow">↗</span> </div>
+                     <div class="card-meta"><span>আজকের পত্রিকা</span><span class="sep"></span><span>২২ এপ্রিল ২০২৬</span><span class="arrow">↗</span></div>
                   </a>
                   <a class="card" href="https://www.bd-pratidin.com/saturday-morning/2025/11/15/1179708" target="_blank" rel="noopener">
-                     <div class="card-topic">মানুষের-গল্প</div>
+                     <div class="card-topic">মানুষের গল্প</div>
                      <div class="card-title">শরীফের ক্যামেরায় সাগরতলের অজানা জগৎ</div>
-                     <div class="card-meta"> <span>বাংলাদেশ প্রতিদিন</span> <span class="sep"></span> <span>১৫ নভেম্বর, ২০২৫</span> <span class="arrow">↗</span> </div>
+                     <div class="card-meta"><span>বাংলাদেশ প্রতিদিন</span><span class="sep"></span><span>১৫ নভেম্বর ২০২৫</span><span class="arrow">↗</span></div>
                   </a>
                </div>
             </div>
-            <!-- পরিবেশ ও প্রকৃতি --> 
+            <!-- /মানুষের গল্প -->
+
+            <!-- পরিবেশ ও প্রকৃতি -->
             <div class="category-group cat-teal" id="পরিবেশ-ও-প্রকৃতি">
-               <div class="category-heading"> <span class="cat-dot"></span> পরিবেশ ও প্রকৃতি </div>
+               <div class="category-heading"><span class="cat-dot"></span> পরিবেশ ও প্রকৃতি</div>
                <div class="articles-grid">
                   <a class="card" href="https://www.ekalerkantho.com/home/magazine/2019-09-28" target="_blank" rel="noopener">
                      <div class="card-topic">পরিবেশ ও প্রকৃতি</div>
                      <div class="card-title">সাপের জন্য ভালোবাসা</div>
-                     <div class="card-meta"> <span>কালের কণ্ঠ</span> <span class="sep"></span> <span>২৮ সেপ্টেম্বর ২০১৯</span> <span class="arrow">↗</span> </div>
+                     <div class="card-meta"><span>কালের কণ্ঠ</span><span class="sep"></span><span>২৮ সেপ্টেম্বর ২০১৯</span><span class="arrow">↗</span></div>
                   </a>
                   <a class="card" href="https://www.kalerkantho.com/epaper/2024-11-26/9" target="_blank" rel="noopener">
                      <div class="card-topic">পরিবেশ ও প্রকৃতি</div>
                      <div class="card-title">শিকারি থেকে বন্যপ্রাণী প্রেমী</div>
-                     <div class="card-meta"> <span>কালের কণ্ঠ</span> <span class="sep"></span> <span>২৬ নভেম্বর ২০২৪</span> <span class="arrow">↗</span> </div>
+                     <div class="card-meta"><span>কালের কণ্ঠ</span><span class="sep"></span><span>২৬ নভেম্বর ২০২৪</span><span class="arrow">↗</span></div>
                   </a>
-                  <a class="card" href="https://www.kalerkantho.com/feature/oboshor/2024/04/02/1376640 " target="_blank" rel="noopener">
+                  <a class="card" href="https://www.kalerkantho.com/feature/oboshor/2024/04/02/1376640" target="_blank" rel="noopener">
                      <div class="card-topic">পরিবেশ ও প্রকৃতি</div>
                      <div class="card-title">পেশা শিক্ষকতা, নেশা বন্য প্রাণীর সেবা</div>
-                     <div class="card-meta"> <span>কালেরকন্ঠ</span> <span class="sep"></span> <span>১১ মে ২০২৬</span> <span class="arrow">↗</span> </div>
+                     <div class="card-meta"><span>কালেরকন্ঠ</span><span class="sep"></span><span>২ এপ্রিল ২০২৪</span><span class="arrow">↗</span></div>
                   </a>
                   <a class="card" href="https://www.kalerkantho.com/print-edition/first-page/2026/04/25/1676171" target="_blank" rel="noopener">
                      <div class="card-topic">পরিবেশ ও প্রকৃতি</div>
                      <div class="card-title">পাখির পরম ভরসা সায়েদ</div>
-                     <div class="card-meta"> <span>কালের কণ্ঠ</span> <span class="sep"></span> <span>২৫ এপ্রিল ২০২৬</span> <span class="arrow">↗</span> </div>
+                     <div class="card-meta"><span>কালের কণ্ঠ</span><span class="sep"></span><span>২৫ এপ্রিল ২০২৬</span><span class="arrow">↗</span></div>
                   </a>
                   <a class="card" href="https://samakal.com/kisualonil/article/336070/%E0%A6%AE%E0%A7%87%E0%A6%9B%E0%A7%8B%E0%A6%AC%E0%A6%BF%E0%A6%A1%E0%A6%BC%E0%A6%BE%E0%A6%B2%E0%A7%87%E0%A6%B0-%E0%A6%AC%E0%A6%A8%E0%A7%8D%E0%A6%A7%E0%A7%81-%E0%A6%AC%E0%A6%96%E0%A6%A4%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0-%E0%A6%AE%E0%A6%BE%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%B0" target="_blank" rel="noopener">
                      <div class="card-topic">পরিবেশ ও প্রকৃতি</div>
                      <div class="card-title">মেছোবিড়ালের বন্ধু বখতিয়ার মাস্টার</div>
-                     <div class="card-meta"> <span>সমকাল</span> <span class="sep"></span> <span>৩১ জানুয়ারি ২০২৬</span> <span class="arrow">↗</span> </div>
+                     <div class="card-meta"><span>সমকাল</span><span class="sep"></span><span>৩১ জানুয়ারি ২০২৬</span><span class="arrow">↗</span></div>
                   </a>
                   <a class="card" href="https://www.kalerkantho.com/feature/oboshor/2026/02/02/1642004" target="_blank" rel="noopener">
                      <div class="card-topic">পরিবেশ ও প্রকৃতি</div>
                      <div class="card-title">হনুমানের অকৃত্রিম বন্ধু নাজমুল</div>
-                     <div class="card-meta"> <span>কালের কণ্ঠ</span> <span class="sep"></span> <span>২ ফেব্রুয়ারি ২০২৬</span> <span class="arrow">↗</span> </div>
+                     <div class="card-meta"><span>কালের কণ্ঠ</span><span class="sep"></span><span>২ ফেব্রুয়ারি ২০২৬</span><span class="arrow">↗</span></div>
                   </a>
                   <a class="card" href="https://epaper.ajkerpatrika.com/2024-02-28" target="_blank" rel="noopener">
                      <div class="card-topic">পরিবেশ ও প্রকৃতি</div>
                      <div class="card-title">প্রাণী উদ্ধার যার জীবনের লক্ষ্য</div>
-                     <div class="card-meta"> <span>আজকের পত্রিকা</span> <span class="sep"></span> <span>২৮ ফেব্রুয়ারি ২০২৪</span> <span class="arrow">↗</span> </div>
+                     <div class="card-meta"><span>আজকের পত্রিকা</span><span class="sep"></span><span>২৮ ফেব্রুয়ারি ২০২৪</span><span class="arrow">↗</span></div>
                   </a>
                </div>
             </div>
-            <!-- ধর্ম ও জীবন --> 
+            <!-- /পরিবেশ ও প্রকৃতি -->
+
+            <!-- ধর্ম ও জীবন -->
             <div class="category-group cat-gold" id="ধর্ম-ও-জীবন">
                <div class="category-heading"><span class="cat-dot"></span> ধর্ম ও জীবন</div>
                <div class="articles-grid">
                   <a class="card" href="https://www.shomoyeralo.com/news/357701" target="_blank" rel="noopener">
                      <div class="card-topic">ধর্ম ও জীবন</div>
                      <div class="card-title">প্রাণী হত্যা ইসলামের শিক্ষা নয়</div>
-                     <div class="card-meta"> <span>সময়ের আলো</span><span class="sep"></span> <span>১৯ এপ্রিল ২০২৬</span><span class="arrow">↗</span> </div>
+                     <div class="card-meta"><span>সময়ের আলো</span><span class="sep"></span><span>১৯ এপ্রিল ২০২৬</span><span class="arrow">↗</span></div>
                   </a>
                   <a class="card" href="https://www.deshrupantor.com/228044/%E0%A6%95%E0%A7%8B%E0%A6%B0%E0%A6%86%E0%A6%A8-%E0%A6%B9%E0%A6%BE%E0%A6%A6%E0%A6%BF%E0%A6%B8%E0%A7%87-%E0%A6%9C%E0%A6%BF%E0%A6%A8-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B8%E0%A6%99%E0%A7%8D%E0%A6%97" target="_blank" rel="noopener">
                      <div class="card-topic">ধর্ম ও জীবন</div>
                      <div class="card-title">কোরআন-হাদিসে জিন প্রসঙ্গ</div>
-                     <div class="card-meta"> <span>দেশ রূপান্তর</span> <span class="sep"></span> <span>২৮ জুন ২০২০</span> <span class="arrow">↗</span> </div>
+                     <div class="card-meta"><span>দেশ রূপান্তর</span><span class="sep"></span><span>২৮ জুন ২০২০</span><span class="arrow">↗</span></div>
                   </a>
                </div>
             </div>
-            <!-- ঐতিহ্য ও সংস্কৃতি --> 
+            <!-- /ধর্ম ও জীবন -->
+
+            <!-- ঐতিহ্য ও সংস্কৃতি -->
             <div class="category-group cat-red" id="ঐতিহ্য-ও-সংস্কৃতি">
                <div class="category-heading"><span class="cat-dot"></span> ঐতিহ্য ও সংস্কৃতি</div>
                <div class="articles-grid">
                   <a class="card" href="https://www.ajkerpatrika.com/women/ajpaiywxla2c9" target="_blank" rel="noopener">
                      <div class="card-topic">ঐতিহ্য ও সংস্কৃতি</div>
                      <div class="card-title">বাঁশ-বেতে বোনা পাহাড়ি ঐতিহ্যের গল্প</div>
-                     <div class="card-meta"> <span>আজকের পত্রিকা</span><span class="sep"></span> <span>২৯ এপ্রিল ২০২৬</span><span class="arrow">↗</span> </div>
+                     <div class="card-meta"><span>আজকের পত্রিকা</span><span class="sep"></span><span>২৯ এপ্রিল ২০২৬</span><span class="arrow">↗</span></div>
                   </a>
                </div>
             </div>
-            <!-- লেখালেখি --> 
+            <!-- /ঐতিহ্য ও সংস্কৃতি -->
+
+            <!-- লেখালেখি -->
             <div class="category-group cat-purple" id="লেখালেখি">
                <div class="category-heading"><span class="cat-dot"></span> লেখালেখি</div>
                <div class="articles-grid">
                   <a class="card" href="https://www.deshrupantor.com/674882/%E0%A6%B8%E0%A6%82%E0%A6%AC%E0%A6%BE%E0%A6%A6%E0%A6%AA%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A7%87-%E0%A6%AB%E0%A6%BF%E0%A6%9A%E0%A6%BE%E0%A6%B0-%E0%A6%B2%E0%A6%BF%E0%A6%96%E0%A6%A4%E0%A7%87-%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%8B-%E0%A6%A4%E0%A7%81%E0%A6%AE%E0%A6%BF%E0%A6%93" target="_blank" rel="noopener">
                      <div class="card-topic">লেখালেখি</div>
                      <div class="card-title">সংবাদপত্রে ফিচার লিখতে পারো তুমিও</div>
-                     <div class="card-meta"> <span>দেশ রূপান্তর</span><span class="sep"></span> <span>২৭ মার্চ ২০২৬</span><span class="arrow">↗</span> </div>
+                     <div class="card-meta"><span>দেশ রূপান্তর</span><span class="sep"></span><span>২৭ মার্চ ২০২৬</span><span class="arrow">↗</span></div>
                   </a>
                </div>
             </div>
+            <!-- /লেখালেখি -->
+
          </div>
-         <div class="footer"> <span class="footer-copy">© মুহাম্মদ শফিকুর রহমান</span> <span class="footer-country">বাংলাদেশ</span> </div>
+         <!-- /Articles Section -->
+
+         <div class="footer">
+            <span class="footer-copy">© মুহাম্মদ শফিকুর রহমান</span>
+            <span class="footer-country">বাংলাদেশ</span>
+         </div>
+
       </div>
    </body>
 </html>
