@@ -48,6 +48,40 @@
          .section-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #bbb; margin-bottom: 1rem; }
          .about-text { font-size: 0.97rem; color: #4a4845; line-height: 1.9; background: #fff; border-left: 4px solid var(--green); border-radius: 0 10px 10px 0; padding: 1rem 1.2rem; box-shadow: 0 1px 6px rgba(0,0,0,0.04); margin-bottom: 2rem; }
 
+         /* ========== PUBLISHED WORKS SECTION ========== */
+         .published-section { padding: 2rem 0; border-bottom: 1px solid var(--border); }
+         .published-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.2rem; flex-wrap: wrap; gap: 10px; }
+         .published-title { font-size: 1.1rem; font-weight: 700; color: var(--blue); display: flex; align-items: center; gap: 8px; }
+         .published-title::before { content: ''; display: inline-block; width: 4px; height: 22px; background: var(--blue); border-radius: 2px; }
+         .published-count { font-size: 0.75rem; background: var(--blue-light); color: var(--blue); padding: 4px 12px; border-radius: 20px; font-weight: 600; border: 1px solid #a8c4e8; }
+
+         /* Gallery Grid */
+         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+         .gallery-item { background: #fff; border-radius: 10px; border: 1px solid var(--border); overflow: hidden; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+         .gallery-item:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(26,95,168,0.15); border-color: var(--blue); }
+         .gallery-thumb { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; background: #f0f4f8; }
+         .gallery-thumb-placeholder { width: 100%; aspect-ratio: 4/3; background: linear-gradient(135deg, #e8f0fb, #f4eaf8); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: #bbb; }
+         .gallery-info { padding: 8px 10px; }
+         .gallery-num { font-size: 0.65rem; font-weight: 700; color: var(--blue); margin-bottom: 2px; }
+         .gallery-paper { font-size: 0.72rem; color: #555; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+         /* Modal */
+         .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.88); z-index: 1000; align-items: center; justify-content: center; padding: 1rem; }
+         .modal-overlay.active { display: flex; }
+         .modal-box { background: #fff; border-radius: 16px; max-width: 860px; width: 100%; max-height: 92vh; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+         .modal-header { padding: 1rem 1.2rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+         .modal-title { font-size: 0.9rem; font-weight: 700; color: #111; }
+         .modal-paper { font-size: 0.8rem; color: var(--blue); font-weight: 600; }
+         .modal-close { width: 32px; height: 32px; border-radius: 50%; background: #f0f4f8; border: none; cursor: pointer; font-size: 1.1rem; color: #555; display: flex; align-items: center; justify-content: center; transition: background 0.15s; }
+         .modal-close:hover { background: #e0e6ef; }
+         .modal-body { flex: 1; overflow: auto; display: flex; align-items: center; justify-content: center; padding: 1rem; background: #f8f9fb; }
+         .modal-img { max-width: 100%; max-height: 70vh; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+         .modal-nav { padding: 0.8rem 1.2rem; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+         .modal-nav-btn { padding: 7px 18px; border-radius: 8px; border: 1.5px solid var(--border); background: #fff; cursor: pointer; font-family: 'Hind Siliguri', sans-serif; font-size: 0.82rem; font-weight: 600; color: #444; transition: all 0.15s; }
+         .modal-nav-btn:hover { background: var(--blue-light); color: var(--blue); border-color: var(--blue); }
+         .modal-nav-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+         .modal-counter { font-size: 0.78rem; color: #999; }
+
          /* Category */
          .category-group { margin-bottom: 2.2rem; scroll-margin-top: 2rem; width: 100%; }
          .category-heading { display: flex; align-items: center; gap: 10px; font-size: 1.05rem; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid; }
@@ -101,6 +135,7 @@
          @media (max-width: 480px) {
             .name { font-size: 1.6rem; }
             .articles-grid { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
          }
       </style>
    </head>
@@ -125,6 +160,7 @@
                <a class="tag tag-purple" href="#ফ্রিল্যান্সিং">ফ্রিল্যান্সিং</a>
                <a class="tag tag-purple" href="#ক্যালিগ্রাফি">ক্যালিগ্রাফি</a>
                <a class="tag tag-purple" href="#নারী">নারী</a>
+               <a class="tag tag-blue" href="#published-works">প্রকাশিত লেখা</a>
             </div>
             <div class="stats">
                <div class="stat"><span class="stat-num">৩০+</span><span class="stat-label">বছরের অভিজ্ঞতা</span></div>
@@ -143,6 +179,40 @@
          </div>
          <!-- /About -->
 
+         <!-- ========== বিভিন্ন পত্রিকায় প্রকাশিত লেখা ========== -->
+         <div class="published-section" id="published-works">
+            <div class="published-header">
+               <div class="published-title">বিভিন্ন পত্রিকায় প্রকাশিত লেখা</div>
+               <span class="published-count">৮৬টি লেখা</span>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+               <!-- JavaScript দিয়ে তৈরি হবে -->
+            </div>
+         </div>
+         <!-- /প্রকাশিত লেখা -->
+
+         <!-- Modal -->
+         <div class="modal-overlay" id="modalOverlay">
+            <div class="modal-box">
+               <div class="modal-header">
+                  <div>
+                     <div class="modal-title" id="modalTitle">লেখা</div>
+                     <div class="modal-paper" id="modalPaper"></div>
+                  </div>
+                  <button class="modal-close" onclick="closeModal()">✕</button>
+               </div>
+               <div class="modal-body">
+                  <img class="modal-img" id="modalImg" src="" alt="প্রকাশিত লেখা">
+               </div>
+               <div class="modal-nav">
+                  <button class="modal-nav-btn" id="prevBtn" onclick="navigate(-1)">← আগের লেখা</button>
+                  <span class="modal-counter" id="modalCounter"></span>
+                  <button class="modal-nav-btn" id="nextBtn" onclick="navigate(1)">পরের লেখা →</button>
+               </div>
+            </div>
+         </div>
+         <!-- /Modal -->
+
          <!-- Articles -->
          <div class="section">
             <div class="section-label">বাছাই করা লেখা</div>
@@ -156,19 +226,14 @@
                      <div class="card-title">ফারজানার রঙিন ক্যানভাসের আলো</div>
                      <div class="card-meta"><span>প্রতিদিনের বাংলাদেশ</span><span class="sep"></span><span>১০ এপ্রিল ২০২৩</span><span class="arrow">↗</span></div>
                   </a>
+                  <a class="card" href="https://epaper.ajkerpatrika.com/2024-01-31" target="_blank" rel="noopener">
+                     <div class="card-topic">নারী</div>
+                     <div class="card-title">গল্প আকায় মগ্ন থাকেন মাহজাবীন</div>
+                     <div class="card-meta"><span>আজকের পত্রিকা</span><span class="sep"></span><span>৩১ জানুয়ারি ২০২৪</span><span class="arrow">↗</span></div>
+                  </a>
                </div>
             </div>
             <!-- /নারী -->
-    <a class="card" href= https://epaper.ajkerpatrika.com/2024-01-31" target="_blank" rel="noopener">
-      <div class="card-topic">নারী</div>
-      <div class="card-title">গল্প আকায় মগ্ন থাকেন মাহজাবীন</div>
-      <div class="card-meta">
-        <span>আজকের পত্রিকা</span>
-        <span class="sep"></span>
-        <span>৩১ জানুয়ারি ২০২৫</span>
-        <span class="arrow">↗</span>
-      </div>
-    </a>
 
             <!-- ক্যালিগ্রাফি -->
             <div class="category-group cat-purple" id="ক্যালিগ্রাফি">
@@ -348,5 +413,84 @@
          </div>
 
       </div>
+
+      <script>
+         // ===== পত্রিকার নামের তালিকা =====
+         // আপনি চাইলে এখানে প্রতিটি নম্বরের জন্য পত্রিকার নাম লিখতে পারেন
+         // যেমন: 3: "কালের কণ্ঠ" — না লিখলে খালি থাকবে
+         const paperNames = {
+            1: "কালের কণ্ঠ",
+            2: "প্রথম আলো",
+            3: "বাংলাদেশ প্রতিদিন",
+            // বাকিগুলো আপনি পরে যোগ করুন
+         };
+
+         const TOTAL = 86;
+         let currentIndex = 0;
+
+         // Gallery তৈরি
+         const grid = document.getElementById('galleryGrid');
+         for (let i = 1; i <= TOTAL; i++) {
+            const item = document.createElement('div');
+            item.className = 'gallery-item';
+            item.setAttribute('data-index', i - 1);
+            const paper = paperNames[i] || '';
+            item.innerHTML = `
+               <img class="gallery-thumb" src="লেখা (${i}).jpg" alt="লেখা ${i}"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+               <div class="gallery-thumb-placeholder" style="display:none;">📰</div>
+               <div class="gallery-info">
+                  <div class="gallery-num">লেখা #${i}</div>
+                  <div class="gallery-paper">${paper}</div>
+               </div>
+            `;
+            item.addEventListener('click', () => openModal(i - 1));
+            grid.appendChild(item);
+         }
+
+         // Modal খোলা
+         function openModal(index) {
+            currentIndex = index;
+            updateModal();
+            document.getElementById('modalOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+         }
+
+         function updateModal() {
+            const num = currentIndex + 1;
+            const paper = paperNames[num] || '';
+            document.getElementById('modalImg').src = `লেখা (${num}).jpg`;
+            document.getElementById('modalTitle').textContent = `লেখা #${num}`;
+            document.getElementById('modalPaper').textContent = paper;
+            document.getElementById('modalCounter').textContent = `${num} / ${TOTAL}`;
+            document.getElementById('prevBtn').disabled = currentIndex === 0;
+            document.getElementById('nextBtn').disabled = currentIndex === TOTAL - 1;
+         }
+
+         function navigate(dir) {
+            currentIndex += dir;
+            if (currentIndex < 0) currentIndex = 0;
+            if (currentIndex >= TOTAL) currentIndex = TOTAL - 1;
+            updateModal();
+         }
+
+         function closeModal() {
+            document.getElementById('modalOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+         }
+
+         // Overlay click বা Escape দিয়ে বন্ধ
+         document.getElementById('modalOverlay').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+         });
+         document.addEventListener('keydown', function(e) {
+            const overlay = document.getElementById('modalOverlay');
+            if (!overlay.classList.contains('active')) return;
+            if (e.key === 'Escape') closeModal();
+            if (e.key === 'ArrowLeft') navigate(-1);
+            if (e.key === 'ArrowRight') navigate(1);
+         });
+      </script>
+
    </body>
 </html>
